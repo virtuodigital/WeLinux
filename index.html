@@ -19,15 +19,9 @@
 
 
 
-<?php
-	
-	//$i = rand(1,6);
-	//echo '<div class="hero bg'.$i.'">';
-	//echo '<div class="hero bg6">';
-	
-?>
 
-	<div class="hero bg6">
+
+<div class="hero bg6">
 	<div class="hero-center">
 		<img src="assets/img/logo-white.png" alt="We Linux"/><br>
 	</div>
@@ -144,44 +138,6 @@
 		<div class="half-block">
 			<div class="contact color-white">
 
-
-				<?php	
-				if (isset($_REQUEST['email']) && isset($_REQUEST['name']) && isset($_REQUEST['check-hum'])){
-				
-					  $contact_email = $_REQUEST['email'];
-					  $email = 'info@welinux.cl';
-					  $name = $_REQUEST['name'];
-					  $message = $_REQUEST['message'];
-					  $subject = 'Contacto de welinux.cl';
-					  $email_from = $name.'<'.$contact_email.'>';
-					  $headers = 'From: '.$email_from.'\n'.
-				  	  'Reply-To: '.$email_from.'\n';
-
- 
-					  $headers .= 'Content-type: text/plain; charset="UTF-8"; format=flowed \n';
-					  $headers .= 'Mime-Version: 1.0 \n'; 
-
-					  $mail_body = $name.' te enviado el siguiente mensaje desde el sitio web: \n'
-					    .$message.'\n'
-						.'El correo de '.$name.' es: '.$contact_email.'\n'
-						.$contact_email. '\n All rights reserved © welinux.cl | Powered by virtuodigital.com';
-					
-					if (filter_var($email, FILTER_VALIDATE_EMAIL) || $name != NULL || $message != NULL){
-					  mail($email, $subject, $mail_body, $headers);
-
-					  echo "<h3>" .$name. "</h3>" . "<br><br>Muchas gracias, su mensaje se ha enviado correctamente y le responderemos a la brevedad<br><br>";
-					}
-				}else{
-					echo '<h2>Escribenos un mensaje</h2><br><br>
-					<form class="contact" action="#contact" method="post">
-						<input type="text" name="name" value="" placeholder="Nombre" required>
-						<input type="text" name="email" value="" placeholder="Email" required>
-						<textarea name="message" placeholder="Mensaje"></textarea><br><br>
-						 No soy un robot <span id="check-hum"></span><br><br>
-						<input type="submit" value="Send">
-					</form>';
-				  }
-				?>	
 
 			</div>
 		</div>
