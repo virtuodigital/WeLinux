@@ -23,9 +23,11 @@
 	
 	//$i = rand(1,6);
 	//echo '<div class="hero bg'.$i.'">';
-	echo '<div class="hero bg6">';
+	//echo '<div class="hero bg6">';
 	
 ?>
+
+	<div class="hero bg6">
 	<div class="hero-center">
 		<img src="assets/img/logo-white.png" alt="We Linux"/><br>
 	</div>
